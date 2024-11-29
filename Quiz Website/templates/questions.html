@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Questions</title>
+    <style>
+        body {
+            background-color: #003366;
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .quiz-container {
+            max-width: 600px;
+            margin: auto;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .quiz-header {
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 20px;
+            color: #f0f0f0;
+        }
+
+        .question {
+            margin-bottom: 15px;
+        }
+
+        .answer-option {
+            display: block;
+            margin: 5px 0;
+            color: white;
+        }
+
+        .submit-btn {
+            background-color: red;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            display: block;
+            margin: 20px auto;
+        }
+
+        .submit-btn:hover {
+            background-color: darkred;
+        }
+    </style>
+</head>
+<body>
+    <div class="quiz-container">
+        <div class="quiz-header">Quiz: General Knowledge</div>
+        <form id="quiz-form" action="/result" method="post"> <!-- Updated form action to /submit_quiz -->
+            <div class="question">
+                <p>1. What is the capital of France?</p>
+                <label class="answer-option"><input type="radio" name="q1" value="a"> A) Berlin</label>
+                <label class="answer-option"><input type="radio" name="q1" value="b"> B) Madrid</label>
+                <label class="answer-option"><input type="radio" name="q1" value="c"> C) Paris</label>
+                <label class="answer-option"><input type="radio" name="q1" value="d"> D) Rome</label>
+            </div>
+            <div class="question">
+                <p>2. Who wrote "Romeo and Juliet"?</p>
+                <label class="answer-option"><input type="radio" name="q2" value="a"> A) Mark Twain</label>
+                <label class="answer-option"><input type="radio" name="q2" value="b"> B) William Shakespeare</label>
+                <label class="answer-option"><input type="radio" name="q2" value="c"> C) Charles Dickens</label>
+                <label class="answer-option"><input type="radio" name="q2" value="d"> D) Jane Austen</label>
+            </div>
+            <div class="question">
+                <p>3. What is the largest planet in our solar system?</p>
+                <label class="answer-option"><input type="radio" name="q3" value="a"> A) Earth</label>
+                <label class="answer-option"><input type="radio" name="q3" value="b"> B) Mars</label>
+                <label class="answer-option"><input type="radio" name="q3" value="c"> C) Jupiter</label>
+                <label class="answer-option"><input type="radio" name="q3" value="d"> D) Saturn</label>
+            </div>
+
+            <div class="question">
+                <p>4. What is the chemical symbol for gold?</p>
+                <label class="answer-option"><input type="radio" name="q4" value="a"> A) Au</label>
+                <label class="answer-option"><input type="radio" name="q4" value="b"> B) Ag</label>
+                <label class="answer-option"><input type="radio" name="q4" value="c"> C) Fe</label>
+                <label class="answer-option"><input type="radio" name="q4" value="d"> D) Pb</label>
+            </div>
+
+            <div class="question">
+                <p>5. Who painted the Mona Lisa?</p>
+                <label class="answer-option"><input type="radio" name="q5" value="a"> A) Vincent Van Gogh</label>
+                <label class="answer-option"><input type="radio" name="q5" value="b"> B) Pablo Picasso</label>
+                <label class="answer-option"><input type="radio" name="q5" value="c"> C) Leonardo da Vinci</label>
+                <label class="answer-option"><input type="radio" name="q5" value="d"> D) Claude Monet</label>
+            </div>
+
+            <div class="question">
+                <p>6. What is the currency of Japan?</p>
+                <label class="answer-option"><input type="radio" name="q6" value="a"> A) Dollar</label>
+                <label class="answer-option"><input type="radio" name="q6" value="b"> B) Yen</label>
+                <label class="answer-option"><input type="radio" name="q6" value="c"> C) Euro</label>
+                <label class="answer-option"><input type="radio" name="q6" value="d"> D) Pound</label>
+            </div>
+
+            <div class="question">
+                <p>7. What is the longest river in the world?</p>
+                <label class="answer-option"><input type="radio" name="q7" value="a"> A) Nile</label>
+                <label class="answer-option"><input type="radio" name="q7" value="b"> B) Amazon</label>
+                <label class="answer-option"><input type="radio" name="q7" value="c"> C) Yangtze</label>
+                <label class="answer-option"><input type="radio" name="q7" value="d"> D) Mississippi</label>
+            </div>
+
+            <div class="question">
+                <p>8. Who discovered penicillin?</p>
+                <label class="answer-option"><input type="radio" name="q8" value="a"> A) Marie Curie</label>
+                <label class="answer-option"><input type="radio" name="q8" value="b"> B) Alexander Fleming</label>
+                <label class="answer-option"><input type="radio" name="q8" value="c"> C) Louis Pasteur</label>
+                <label class="answer-option"><input type="radio" name="q8" value="d"> D) Thomas Edison</label>
+            </div>
+
+            <div class="question">
+                <p>9. What is the smallest country in the world?</p>
+                <label class="answer-option"><input type="radio" name="q9" value="a"> A) Monaco</label>
+                <label class="answer-option"><input type="radio" name="q9" value="b"> B) Vatican City</label>
+                <label class="answer-option"><input type="radio" name="q9" value="c"> C) San Marino</label>
+                <label class="answer-option"><input type="radio" name="q9" value="d"> D) Nauru</label>
+            </div>
+
+            <div class="question">
+                <p>10. What is the main ingredient in guacamole?</p>
+                <label class="answer-option"><input type="radio" name="q10" value="a"> A) Tomato</label>
+                <label class="answer-option"><input type="radio" name="q10" value="b"> B) Avocado</label>
+                <label class="answer-option"><input type="radio" name="q10" value="c"> C) Onion</label>
+                <label class="answer-option"><input type="radio" name="q10" value="d"> D) Pepper</label>
+            </div>
+
+            <div class="question">
+                <p>11. Who was the first person to walk on the moon?</p>
+                <label class="answer-option"><input type="radio" name="q11" value="a"> A) Neil Armstrong</label>
+                <label class="answer-option"><input type="radio" name="q11" value="b"> B) Buzz Aldrin</label>
+                <label class="answer-option"><input type="radio" name="q11" value="c"> C) Yuri Gagarin</label>
+                <label class="answer-option"><input type="radio" name="q11" value="d"> D) John Glenn</label>
+            </div>
+
+            <div class="question">
+                <p>12. What is the hardest natural substance on Earth?</p>
+                <label class="answer-option"><input type="radio" name="q12" value="a"> A) Diamond</label>
+                <label class="answer-option"><input type="radio" name="q12" value="b"> B) Gold</label>
+                <label class="answer-option"><input type="radio" name="q12" value="c"> C) Iron</label>
+                <label class="answer-option"><input type="radio" name="q12" value="d"> D) Quartz</label>
+            </div>
+            
+
+            <button type="submit" class="submit-btn">Submit Quiz</button>
+        </form>
+    </div>
+</body>
+</html>
+

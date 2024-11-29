@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quiz Home</title>
+    <style>
+        body {
+            background-color: #003366;
+            color: black;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .header {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #f0f0f0;
+        }
+
+        .description {
+            font-size: 20px;
+            margin-bottom: 30px;
+            color: #f0f0f0;
+        }
+
+        .start-btn {
+            background-color: red;
+            color: white;
+            border: none;
+            padding: 15px 25px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+            text-decoration: none;
+        }
+
+        .start-btn:hover {
+            background-color: darkred;
+        }
+
+        .nav {
+            margin: 20px 0;
+        }
+
+        .nav-link {
+            color: red;
+            font-size: 18px;
+            text-decoration: none;
+            display: inline-block;
+            margin: 0 20px;
+        }
+
+        .nav-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="header">Welcome to the Apex Quiz App</h1>
+    
+    <p class="description">Ready to test your knowledge? Start the quiz now!</p>
+    
+    <!-- Corrected form action to call the /start route in Flask -->
+    <form action="/quiz" method="POST">
+        <button type="submit" class="quiz-btn">Start Quiz</button>
+    </form>
+
+    <div class="nav">
+        <!-- Links pointing to Flask routes -->
+        <a href="/questions" class="nav-link">Questions</a>
+        <a href="/result" class="nav-link">Result</a>
+    </div>
+</body>
+</html>

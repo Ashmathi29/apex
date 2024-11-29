@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Start Quiz</title>
+    <style>
+        body {
+            background-color: #001F3F;
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .quiz-container {
+            max-width: 600px;
+            margin: auto;
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .quiz-header {
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .question {
+            margin-bottom: 15px;
+        }
+
+        .answer-option {
+            display: block;
+            margin: 5px 0;
+            color: white;
+            background-color: red;
+            padding: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .answer-option:hover {
+            background-color: darkred;
+        }
+
+        .submit-btn {
+            background-color: red;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            display: block;
+            margin: 20px auto;
+            transition: background-color 0.3s;
+        }
+
+        .submit-btn:hover {
+            background-color: darkred;
+        }
+    </style>
+</head>
+<body>
+    <h1>Ready to Test Your Knowledge?</h1>
+    <form action="/questions" method="get"> <!-- Updated form action to the /questions route -->
+        <button type="submit" class="submit-btn">Begin Quiz</button> <!-- Added .submit-btn class for styling -->
+    </form>
+</body>
+</html>
